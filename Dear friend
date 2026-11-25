@@ -1,0 +1,169 @@
+<!DOCTYPE html><html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Secret For You 💗</title><style>
+* {box-sizing:border-box}
+
+body {
+    margin:0;
+    min-height:100vh;
+    background:linear-gradient(135deg,#16002e,#74005b,#ff4d91);
+    color:white;
+    font-family:Arial,sans-serif;
+    text-align:center;
+    overflow-x:hidden;
+}
+
+.box {
+    width:90%;
+    max-width:420px;
+    margin:100px auto;
+    padding:30px 20px;
+    background:rgba(255,255,255,.12);
+    border:1px solid rgba(255,255,255,.3);
+    border-radius:25px;
+    box-shadow:0 0 30px #ff69b4;
+}
+
+h1 {
+    color:#ffc9e5;
+    text-shadow:0 0 15px pink;
+}
+
+input {
+    width:90%;
+    padding:15px;
+    border:none;
+    border-radius:25px;
+    text-align:center;
+    font-size:17px;
+    margin:15px 0;
+}
+
+button {
+    padding:14px 25px;
+    border:none;
+    border-radius:25px;
+    background:#ff4b9b;
+    color:white;
+    font-size:16px;
+    box-shadow:0 0 15px pink;
+}
+
+#message {
+    display:none;
+    padding:20px;
+    line-height:1.8;
+}
+
+.heart {
+    font-size:65px;
+    animation:beat 1s infinite;
+}
+
+@keyframes beat {
+    50% {transform:scale(1.2)}
+}
+
+.floating {
+    position:fixed;
+    bottom:-30px;
+    animation:float 6s linear forwards;
+    pointer-events:none;
+}
+
+@keyframes float {
+    to {
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+</style></head><body><div class="box" id="login"><div class="heart">💗</div><h1>A SECRET FOR YOU</h1><p>Someone prepared something special for you...</p><p>But first, you need the secret password.                  
+
+Dear Friend🔐</p><input type="password" id="password"
+placeholder="Enter secret password">
+
+<br><button onclick="unlock()">UNLOCK 💌</button>
+
+<p id="error" style="color:#ffc1df"></p></div><div class="box" id="message" style="display:none"><div class="heart">❤️</div><h1>YOU FOUND IT!</h1><h2>Dear Best Friend 💗</h2><p>
+If you're reading this, congratulations!
+You discovered my little secret.I just want to say that I'm really thankful
+to have you in my life.
+
+i dont know where to begin but i just want to you know how thankful i am to have someone like you
+in my pakingsit life. Somerimes, we meet people unexpectedly and without even realizing it, 
+they become one of those people, and i'm genuinly grateful that 
+CROSSED.
+
+You are someone worth appreciating.
+Never think that you're not important.
+
+i want you to remember that you are such a wonderful person. Never understimate your worth
+just because there are days when you feel like you're not enough. You
+you're not enough. You are more than enough, and you deserve all the happiness, love, peace,
+and beautiful things that life has to offer. You dont have to be perfect to be appreciated, and you dont have to pretend to be okay all the time just to make other people comfortable.
+
+THANKYOU FOR ALL THE CONVERSATION, RANDOM LAUGHS, UNFORGETTABLE MOMENTS, SILLY JOKE, AND EVEN THE LITTLE THINGS THAT MIGHT ACTUALLY MEAN SO MUCH. THOSE SIMPLE MOMENTS ARE SOMETIMES THE ONES THAT MAKE FRIENDSHIPS SPECIAL.
+
+I MAY NOT ALWAYS EXPRESS HOW MUCH I APPRECIATE YOU, BUT PLEASE KNOW THAT YOUR PRESENCE GENUINELY MAKES A DIFFERENCE.
+
+I hope we create more memories together,
+laugh at silly things, and stay friends
+even when life gets complicated.
+
+keep smiling and stay amazing !
+
+You deserve all the happiness in this world.
+
+</p><h2>YOU'RE MY FAVORITE FRIEND! 🫶</h2><p>Not a love confession. Just a friendship worth keeping forever. 💗</p></div><script>
+
+// CHANGE YOUR PASSWORD HERE
+const secretPassword = "yellow blue";
+
+function unlock() {
+    let input = document.getElementById("password").value;
+
+    if(input === secretPassword) {
+        document.getElementById("login").style.display="none";
+        document.getElementById("message").style.display="block";
+    } else {
+        document.getElementById("error").innerHTML =
+        "Wrong password! Try again. 💔";
+    }
+}
+
+document.getElementById("password")
+.addEventListener("keypress",function(e) {
+    if(e.key==="Enter") unlock();
+});
+
+function createHeart() {
+    let h=document.createElement("div");
+    h.className="floating";
+    h.innerHTML=["💗","💕","❤️","🌸","✨"][
+        Math.floor(Math.random()*5)
+    ];
+    h.style.left=Math.random()*100+"vw";
+    h.style.fontSize="25px";
+    h.style.animationDuration=(3+Math.random()*4)+"s";
+    document.body.appendChild(h);
+    setTimeout(()=>h.remove(),7000);
+}
+
+setInterval(createHeart,400);
+
+</script></body>
+</html><!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
